@@ -1,63 +1,35 @@
 ---
-title: "Data Wrangling Project"
+title: "Covid-19 Dashboard"
 date: 2018-01-28
-tags: [data wrangling, data science, messy data]
+tags: [shiny, coronavirus, covid, dashboard]
 header:
-  image: "/images/perceptron/percept.jpg"
-excerpt: "Data Wrangling, Data Science, Messy Data"
+  image: "/images/perceptron/wordcloud.jpg"
+excerpt: "R Shiny, Coronavirus, Wordcloud, NLP, Dashboard"
 mathjax: "true"
 ---
 
-# H1 Heading
+My first `r shiny` project is a coronavirus dashboard.
 
-## H2 Heading
 
-### H3 Heading
+[Click Here to open the dashboard!](https://glaswasser.shinyapps.io/Covid19/)
 
-Here's some basic text.
 
-And here's some *italics*
 
-Here's some **bold** text.
+It features:
 
-What about a [link](https://github.com/dataoptimal)?
+* Cases over time
+* Availability to select multiple countries
+<img src="{{ site.url }}{{ site.baseurl }}/images/covid/countries.jpg" alt="countries">
 
-Here's a bulleted list:
-* First item
-+ Second item
-- Third item
+* Word Clouds! (see Title image)
 
-Here's a numbered list:
-1. First
-2. Second
-3. Third
 
-Python code block:
-```python
-    import numpy as np
 
-    def test_function(x, y):
-      z = np.sum(x,y)
-      return z
-```
+Data is simply loaded via [Rami Krispin's daily updated dataset:](https://github.com/RamiKrispin/coronavirus)
 
-R code block:
 ```r
-library(tidyverse)
-df <- read_csv("some_file.csv")
-head(df)
+coronavirus <- read.csv("https://raw.githubusercontent.com/RamiKrispin/coronavirus/master/csv/coronavirus.csv", stringsAsFactors = FALSE)
 ```
 
-Here's some inline code `x+y`.
+[Click here for the github repo](https://github.com/glaswasser/shiny-projects/tree/master/Covid_December20)
 
-Here's an image:
-<img src="{{ site.url }}{{ site.baseurl }}/images/perceptron/linsep.jpg" alt="linearly separable data">
-
-Here's another image using Kramdown:
-![alt]({{ site.url }}{{ site.baseurl }}/images/perceptron/linsep.jpg)
-
-Here's some math:
-
-$$z=x+y$$
-
-You can also put it inline $$z=x+y$$
