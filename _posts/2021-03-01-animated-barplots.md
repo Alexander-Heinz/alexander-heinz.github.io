@@ -8,10 +8,11 @@ excerpt: "Make beautiful animated barplots using ggplot & gganimate!"
 mathjax: "true"
 ---
 
+I used to love watching videos from "data is beautiful", where barplots where animated and overtaking each other over time to show data changing over time. 
 
-I really like these animated barplots and was wondering if it’s possible
-in R to create such beautiful animations. I dug the web and
-stackoverflow and R-bloggers had answers for me. It is indeed possible
+Now I wanted to create one myself using R. I chose to use covid-data for this, because it is a relevant topic at these times.
+
+I dug the web and stackoverflow and R-bloggers had answers for me. It is indeed possible
 to create nice animation movies out of plots in R and save them as GIF
 or mp4\!
 
@@ -24,7 +25,7 @@ or mp4\!
 
 Turns out `gganimate` can help us achieve this, by animating the bars created by `ggplot`.
 
-I added as much comments in the code as possible. Have fun recreating /
+I added as many clarifying comments in the code as possible. Have fun recreating /
 improving\!
 
 Let’s start by loading the data and do some data wrangling:
@@ -38,21 +39,14 @@ library(nCov2019) # the dataset
 library(plotly) # the animation library
 library(tidyverse) # useful for wrangling
 library(gganimate) # for the animations
-library(gifski)
-library(magrittr)
-library(magick)
+library(magrittr) # %<>% function is a dplyr shortcut, look it up ;)
+library(magick) # the renderer for gif files
 
 #### LOAD DATA ####
 res <- query()
 ```
 
-    ## last update: 2021-03-14 
-    ## Gloabl total  120384528  cases; and  2664362  deaths
-    ## Gloabl total affect country or areas: 221
-    ## Gloabl total recovered cases: 300658
-    ## last update: 1 
-    ## Total Candidates Programs : 51 
-    ## Total Candidates Programs : 54
+Now we can get the covid data:
 
 ``` r
 y =res$historical
@@ -84,7 +78,8 @@ head(formatted)
     ## 5 Albania     2020-01-23     0      0         0     9 " 0"     
     ## 6 Albania     2020-01-24     0      0         0    10 " 0"
 
-The animation:
+Great! We have a rank for every day for every country in the top 10. Now let us use this inside `ggplot` and use `gganimate` to get it animated!
+
 
 ``` r
 # animate
