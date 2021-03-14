@@ -1,10 +1,11 @@
 ---
 title: "Animated Barplots"
-author: Alexander Heinz
 date: 2021-03-01
-tags: [barplot, ggplot, gganimate, animation]
+tags: [barplot, ggplot, gganimate, animation, rstudio, R]
+header:
+  image: "/images/animated-barplots_files/figure-gfm/unnamed-chunk-2-1.gif"
+excerpt: "Make beautiful animated barplots using ggplot & gganimate!"
 mathjax: "true"
-excerpt: "How to make animated barplots with gganimate!"
 ---
 
 
@@ -21,12 +22,7 @@ or mp4\!
   - use n-COVID-19 data to see the top countries animated
   - smoothen it up\!
 
-This is largely inspired and / or copied from the following two
-sources:
-
-<https://stackoverflow.com/questions/53162821/animated-sorted-bar-chart-with-bars-overtaking-each-other>
-
-<https://www.r-bloggers.com/how-to-create-bar-race-animation-charts-in-r/>
+Turns out `gganimate` can help us achieve this, by animating the bars created by `ggplot`.
 
 I added as much comments in the code as possible. Have fun recreating /
 improving\!
@@ -51,9 +47,9 @@ res <- query()
 ```
 
     ## last update: 2021-03-14 
-    ## Gloabl total  120382782  cases; and  2664281  deaths
+    ## Gloabl total  120384528  cases; and  2664362  deaths
     ## Gloabl total affect country or areas: 221
-    ## Gloabl total recovered cases: 269199
+    ## Gloabl total recovered cases: 300658
     ## last update: 1 
     ## Total Candidates Programs : 51 
     ## Total Candidates Programs : 54
@@ -73,9 +69,20 @@ formatted <- d %>%
   filter(date > as.Date("2020-01-01")) %>%  # filter custom date
   ungroup()
 
-#tail(formatted)
 formatted$date = as.Date(formatted$date)
+
+head(formatted)
 ```
+
+    ## # A tibble: 6 x 7
+    ##   country     date       cases deaths recovered  rank Value_lbl
+    ##   <chr>       <date>     <int>  <int>     <int> <dbl> <chr>    
+    ## 1 Afghanistan 2020-01-22     0      0         0     7 " 0"     
+    ## 2 Afghanistan 2020-01-23     0      0         0     9 " 0"     
+    ## 3 Afghanistan 2020-01-24     0      0         0    10 " 0"     
+    ## 4 Albania     2020-01-22     0      0         0     7 " 0"     
+    ## 5 Albania     2020-01-23     0      0         0     9 " 0"     
+    ## 6 Albania     2020-01-24     0      0         0    10 " 0"
 
 The animation:
 
@@ -84,24 +91,26 @@ The animation:
 animated <- 
   # create a ggplot with ..
   ggplot(formatted, aes(rank, group = country, 
-                        fill = as.factor(country), color = as.factor(country))) +
+        fill = as.factor(country), color = as.factor(country))) +
   # the aesthetics for the bars: y position, height, alpha is the opacity
   geom_tile(aes(y = cases/2,
                 height = cases,
                 width = 0.9), alpha = 0.8, color = NA) +
-  # the labels for the countries in front, the paste0 needs to be there for the right position
+  # the labels for the countries in front, the paste0
+  # needs to be there for the right position
   geom_text(aes(y = 0, label = paste(country, " ")), vjust = 0.1, hjust = 1) +
-  # the labels for the numbers. somehow this only works with the labels for rounded numbers like that.
+  # the labels for the numbers. 
   geom_text(aes(y=cases, label = paste0(Value_lbl), hjust = 0)) +
   # flip the coordinate system, clip off for the right display
   coord_flip(clip = "off", expand = FALSE) +
   # reverse the x-scale to have the largest bar on top
   scale_x_reverse() +
-  # to make the background grid lines moving (view_follow creates warnings but can be ignored)
   scale_y_continuous(labels = scales::comma) +
+  # to make the background grid lines moving, use view_follow
   view_follow() +
   # this is for removing redundant labels etc:
   guides(color = FALSE, fill = FALSE) +
+  # change background & theme
   theme(axis.line=element_blank(),
         axis.text.x=element_blank(),
         axis.text.y=element_blank(),
@@ -127,7 +136,7 @@ animated <-
   # more options to smoothen the transitions
   enter_grow() +
   exit_shrink() +
-  ease_aes("linear") +
+  ease_aes("cubic-in-out") +
   labs(title = 'Cumulative confirmed cases on {closest_state}',  
        subtitle  =  "Top 10 Countries",
        caption  = "Tianzhi Wu, Erqiang Hu, Xijin Ge*, Guangchuang Yu*. 
@@ -135,26 +144,10 @@ animated <-
          doi: https://doi.org/10.1101/2020.02.25.20027433") 
 
 # this is the animation here
-#animated
-#animate(animated, 100, fps = 25, duration = 20, width = 800, height = 600)
-
 animate(animated, duration = 75, fps = 25, renderer = magick_renderer())
 ```
 
-![](animated-barplots_files/figure-gfm/unnamed-chunk-2-1.gif)<!-- -->
-
-``` r
-#animate(animated)
-#animate(animated, 100, fps = 30, duration = 100,  width = 1200, height = 1000,
-#        renderer = gifski_renderer("confirmed_cases_new.gif"))
-# create a mp4:
-#animate(animated, 200, fps = 30,  width = 1200, height = 1000,
-#        renderer = ffmpeg_renderer()) -> for_mp4anim_save("animation.mp4", animation = for_mp4 )
+<img src="{{ site.url }}{{ site.baseurl }}/images/animated-barplots_files/figure-gfm/unnamed-chunk-2-1.gif" alt="here, the animation should show up...">
 
 
-rm(list = ls()); gc()
-```
-
-    ##           used (Mb) gc trigger  (Mb) limit (Mb) max used  (Mb)
-    ## Ncells 1218348 65.1    2975874 159.0         NA  2975874 159.0
-    ## Vcells 2208251 16.9   10146329  77.5      16384 10146329  77.5
+[Click here for the github repo](https://github.com/glaswasser/animated-running-corona-bar-plot)
