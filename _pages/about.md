@@ -5,10 +5,13 @@ header:
   image: "/images/zakim.jpg"
 ---
 
-After finishing my M.Sc. in Psychology from the University of Innsbruck, I am now pursuing another M.Sc. in Behavioral Data Science at the University of Amsterdam. 
+After graduating with a B.Sc. and M.Sc. in Psychology at the University of Innsbruck, I am now pursuing another M.Sc. in Behavioral Data Science at the University of Amsterdam, which will be finished in Summer 2021. 
 
-My passions lie in the areas of psychology (esp. Cognition & Consciousness, Memory, Emotions) and Data Science (esp. Natural Language Processing, ML/AI and Visualization).
+My passions lie in the areas of psychology (esp. Memory, Cognition & Consciousness) and Data Science (esp. Natural Language Processing, ML/AI and Visualization).
 
-I have practical experience both in academia (tutoring & research, co-authoring papers) and industry (internships at two different companies). In my free time I enjoy working on private projects.
+I have practical and demonstratable experience both in academia (tutoring & research, co-authoring papers) and industry (internships at two different companies). In my free time I enjoy working on private projects. I also enjoy doing sports (especially all kinds of boardsports) and play the piano.
 
-Feel free to contact me for collabs and networking!
+Feel free to contact me for collabs and networking! You'll find me on LinkedIn below my portrait!
+
+Alex
+
