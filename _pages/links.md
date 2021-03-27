@@ -1,6 +1,6 @@
 ---
-title: "test"
-permalink: /test/
+title: "Links"
+permalink: /links/
 header:
   image: "/images/zakim.jpg"
 ---
