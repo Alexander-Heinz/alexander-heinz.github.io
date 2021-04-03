@@ -18,7 +18,8 @@ header:
 * Support Vector Machines
 * Random Forests
 * Boosting
-https://www.kaggle.com/glaswasser/baby-reviews-elise-tom-alex-group-5-round-2
+
+[https://www.kaggle.com/glaswasser/baby-reviews-elise-tom-alex-group-5-round-2[]
 
 
 
@@ -26,10 +27,12 @@ https://www.kaggle.com/glaswasser/baby-reviews-elise-tom-alex-group-5-round-2
 * Multinomial Regression with Lasso and Ridge Regularisation
 * Random Forest
 * LDA / QDA
-https://www.kaggle.com/glaswasser/emotion-recognition-t5-alexander-cathelijne-final
+
+[https://www.kaggle.com/glaswasser/emotion-recognition-t5-alexander-cathelijne-final]
 
 
 
 **Personality Prediction of YouTube vloggers using linear Regression**
-https://www.kaggle.com/glaswasser/notebook-bertlich-arja-heinz-team-2
+
+[https://www.kaggle.com/glaswasser/notebook-bertlich-arja-heinz-team-2]
 
