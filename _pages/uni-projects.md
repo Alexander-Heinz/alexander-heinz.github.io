@@ -5,12 +5,11 @@ header:
   image: "/images/zakim.jpg"
 ---
 
-# My Uni Projects
 
 ## From the course "Big Data Analysis" at the University of Amsterdam
 
 
-**Predicting Amazon review ratings from their text content**
+[https://www.kaggle.com/glaswasser/baby-reviews-elise-tom-alex-group-5-round-2](**Predicting Amazon review ratings from their text content**)
 * Lasso and Ridge regression
 * Principal Components and Partial Least Squares regression
 * Smoothing
@@ -19,7 +18,6 @@ header:
 * Random Forests
 * Boosting
 
-[https://www.kaggle.com/glaswasser/baby-reviews-elise-tom-alex-group-5-round-2[]
 
 
 
