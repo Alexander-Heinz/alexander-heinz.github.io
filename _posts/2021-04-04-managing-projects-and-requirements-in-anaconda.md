@@ -40,13 +40,15 @@ Or:
 - navigate to the folder of the project in the terminal
 - type `pipreqs .` to include all packages
 
-Example:
-<img src="{{ site.url }}{{ site.baseurl }}/images/managing-projects/pipreqs.jpg" alt="pipreqs-pic">
 
+{% include image.html path="/images/managing-projects/pipreqs.jpg" description="Example usage of pipreqs" %}
 
-Your `requirements.txt` will be created
+Your `requirements.txt` will be created in the same folder.
 
 # Create a virutal environment in anaconda and install requirements.txt
+
+Now that we have a `requirements.txt` file with required modules, we can install them in a virtual environment using `conda`.
+
 ### 1. Create a virtual environment for your project in conda
 * To create a new environment without further specifications:
     type `conda create --name myenv`
@@ -54,14 +56,15 @@ Your `requirements.txt` will be created
 * To create an environment with a specific version of Python:
     Type `conda create -n myenv python=3.9.2` (where 3.9.2 is your desired version)
 
-where `myenv` is your environment name
+where `myenv` is your (custom) environment name
 
 * don't forget to activate your environment using `conda activate myenv`
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/managing-projects/conda-create.jpg" alt="pic">
+{% include image.html path="/images/managing-projects/conda-create.jpg" description="Creating and activating an environment using conda" %}
 
 
 See [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for more information about managing environments in conda.
+
 
 ### 2. Install the requirements in that new environment
 
