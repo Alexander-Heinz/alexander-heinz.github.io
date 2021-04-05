@@ -1,3 +1,13 @@
+---
+title: "Managing Projects And Requirements In Anaconda"
+date: 2021-03-13
+tags: [anaconda, conda, workflow, projects, managing, requirements, requirements.txt]
+header:
+  image: "/images/managing-projects/anaconda.jpg"
+excerpt: "How to create a requirements.txt and install it via a virtualenv in conda"
+mathjax: "true"
+---
+
 
 ### Managing projects in anaconda: The Workflow
 
@@ -6,13 +16,11 @@ Often, it is important for certain projects and python files that a certain vers
 You might also have cloned a project via git that has no `requirements.txt` and you start getting tired of installing each and every module manually.
 
 But don't worry: Here, I will list the steps in order to manage projects in anaconda in a clean, safe way.
-
+You will learn how to:
 - auto-generate and save `requirements.txt` for a given file / project
 - create a virtual environment in `conda`
+(A virtual environment is an isolated workspace where you install your packages separate from the main system installation)
 - install all required packages in the `requirements.txt` in that environment
-
-A virtual environment is an isolated workspace where you install your packages separate from the main system installation.
-
 That way, we can avoid unnecessary conflicts between versions of packages and python versions. 
 
 # Using pipreqs to save the requirements.txt of a project or file
@@ -25,6 +33,11 @@ In your terminal, type `pip install pipreqs` to install pipreqs
 Or:
 - navigate to the folder of the project in the terminal
 - type `pipreqs .` to include all packages
+Example:
+<img src="{{ site.url }}{{ site.baseurl }}/images/managing-projects/pipreqs.jpg" alt="pipreqs-pic">
+
+
+Your `requirements.txt` will be created
 
 # Create a virutal environment in anaconda and install requirements.txt
 ### 1. Create a virtual environment for your project in conda
