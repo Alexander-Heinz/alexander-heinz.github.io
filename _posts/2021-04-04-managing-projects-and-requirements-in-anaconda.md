@@ -33,6 +33,7 @@ In your terminal, type `pip install pipreqs` to install pipreqs
 Or:
 - navigate to the folder of the project in the terminal
 - type `pipreqs .` to include all packages
+
 Example:
 <img src="{{ site.url }}{{ site.baseurl }}/images/managing-projects/pipreqs.jpg" alt="pipreqs-pic">
 
@@ -50,6 +51,9 @@ Your `requirements.txt` will be created
 where `myenv` is your environment name
 
 * don't forget to activate your environment using `conda activate myenv`
+
+<img src="{{ site.url }}{{ site.baseurl }}/images/managing-projects/conda-create.jpg" alt="pic">
+
 
 See [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for more information about managing environments in conda.
 
