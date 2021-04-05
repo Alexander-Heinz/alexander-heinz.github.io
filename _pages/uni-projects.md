@@ -13,11 +13,8 @@ header:
 [**Predicting Amazon review ratings from their text content**](https://www.kaggle.com/glaswasser/baby-reviews-elise-tom-alex-group-5-round-2)
 * Lasso and Ridge regression
 * Principal Components and Partial Least Squares regression
-* Smoothing
-* Regression and Classification trees (CART)
 * Support Vector Machines
-* Random Forests
-* Boosting
+* Random Forests, Boosting Regression and Classification trees (CART)
 
 
 
@@ -32,4 +29,4 @@ header:
 
 [**Personality Prediction of YouTube vloggers using linear Regression**](https://www.kaggle.com/glaswasser/notebook-bertlich-arja-heinz-team-2)
 
-
+* Linear Regression
