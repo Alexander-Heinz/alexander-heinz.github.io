@@ -1,6 +1,6 @@
 ---
 title: "Managing Projects And Requirements In Anaconda"
-date: 2021-03-13
+date: 2021-04-04
 tags: [anaconda, conda, workflow, projects, managing, requirements, requirements.txt]
 header:
   image: "/images/managing-projects/anaconda.jpg"
