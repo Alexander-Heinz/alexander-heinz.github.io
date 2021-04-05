@@ -16,7 +16,7 @@ Often, it is important for certain projects and python files that a certain vers
 You might also have cloned a project via git that has no `requirements.txt` and you start getting tired of installing each and every module manually.
 
 
-{% include image.html path="images/managing-projects/install-manually.jpg" description="Installing all modules manually from a file you received can be quite cumbersome" %}
+{% include image.html path="/images/managing-projects/install-manually.jpg" description="Installing all modules manually from a file you received can be quite cumbersome" %}
 
 
 
