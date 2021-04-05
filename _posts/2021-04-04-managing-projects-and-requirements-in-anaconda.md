@@ -29,6 +29,8 @@ You will learn how to:
 - install all required packages in the `requirements.txt` in that environment
 That way, we can avoid unnecessary conflicts between versions of packages and python versions. 
 
+***
+
 # Using pipreqs to save the requirements.txt of a project or file
 ### 1. Install pipreqs
 In your terminal, type `pip install pipreqs` to install pipreqs
@@ -44,6 +46,8 @@ Or:
 {% include image.html path="/images/managing-projects/pipreqs.jpg" description="Example usage of pipreqs" %}
 
 Your `requirements.txt` will be created in the same folder.
+
+*** 
 
 # Create a virutal environment in anaconda and install requirements.txt
 
