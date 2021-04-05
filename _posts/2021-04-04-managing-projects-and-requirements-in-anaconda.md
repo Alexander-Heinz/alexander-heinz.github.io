@@ -15,10 +15,8 @@ Often, it is important for certain projects and python files that a certain vers
 
 You might also have cloned a project via git that has no `requirements.txt` and you start getting tired of installing each and every module manually.
 
-<img src="{{ site.url }}{{ site.baseurl }}/images/managing-projects/install-manually.jpg" alt="pic">
 
-
-{% include image.html url="/managing-projects/install-manually.jpg" description="Test" %}
+{% include image.html path="/managing-projects/install-manually.jpg" description="Installing all modules manually from a file you received can be quite cumbersome" %}
 
 
 
