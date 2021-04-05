@@ -66,10 +66,15 @@ where `myenv` is your (custom) environment name
 
 {% include image.html path="/images/managing-projects/conda-create.jpg" description="Creating and activating an environment using conda" %}
 
+* You can see all your virtual environments using the command `conda info --envs`
 
-See [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for more information about managing environments in conda.
+* See [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for more information about managing environments in conda.
 
 
 ### 2. Install the requirements in that new environment
 
 * Just use `pip install -r requirements.txt` to install all the required packages in their versions!
+
+* you can check if you're in the right pip using the command `which pip`
+
+* see [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#pip-in-env) for more information on using pip inside a virtual environment
