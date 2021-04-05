@@ -15,6 +15,14 @@ Often, it is important for certain projects and python files that a certain vers
 
 You might also have cloned a project via git that has no `requirements.txt` and you start getting tired of installing each and every module manually.
 
+<img src="{{ site.url }}{{ site.baseurl }}/images/managing-projects/install-manually.jpg" alt="pic">
+
+
+{% include image.html url="/managing-projects/install-manually.jpg" description="Test" %}
+
+
+
+
 But don't worry: Here, I will list the steps in order to manage projects in anaconda in a clean, safe way.
 You will learn how to:
 - auto-generate and save `requirements.txt` for a given file / project
