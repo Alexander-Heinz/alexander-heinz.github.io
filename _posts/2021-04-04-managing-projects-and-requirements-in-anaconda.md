@@ -54,8 +54,8 @@ Your `requirements.txt` will be created in the same folder.
 Now that we have a `requirements.txt` file with required modules, we can install them in a virtual environment using `conda`.
 
 ### 1. Create a virtual environment for your project in conda
-* To create a new environment without further specifications:
-    type `conda create --name myenv`
+* To create a new environment without and install python on it:
+    type `conda create --name myenv python`
 
 * To create an environment with a specific version of Python:
     Type `conda create -n myenv python=3.9.2` (where 3.9.2 is your desired version)
@@ -68,12 +68,17 @@ where `myenv` is your (custom) environment name
 
 * You can see all your virtual environments using the command `conda info --envs`
 
+* You can remove a virtual environment using `conda remove --name myenv --all` (where --all is optional)
+
+* You can deactivate and get back to your base env using `conda deactivate`
+
+
 * See [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for more information about managing environments in conda.
 
 
 ### 2. Install the requirements in that new environment
 
-* Just use `pip install -r requirements.txt` to install all the required packages in their versions!
+* Just use `python -m pip install -r requirements.txt` to install all the required packages in their versions!
 
 * you can check if you're in the right pip using the command `which pip`
 

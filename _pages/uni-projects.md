@@ -1,5 +1,5 @@
 ---
-title: "University Projects"
+title: "Kaggle Competitions"
 permalink: /uni-projects/
 header:
   image: "/images/zakim.jpg"
