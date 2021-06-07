@@ -1,4 +1,4 @@
-SIMULATING CORRELATED LIKERT SCALE DATA
+Simulating Correlated Likert-Scale Data In R: 3 Simple Steps
 ================
 
 Let us simulate some data!
@@ -15,40 +15,21 @@ In the following lines of code, I will show you how to simulate the
 ideal scenario of intercorrelated Likert-Scale answers that measure
 *one* underlying factor (construct).
 
+### Loading the libraries
+
 Let’s start by loading the libraries.
 
 ``` r
-library(psych) # for polychoric correlations
+library(polycor) # for polychoric correlations
+library(psych) # for scree plots
 library(tidyverse)
-```
-
-    ## ── Attaching packages ─────────────────────────────────────── tidyverse 1.3.1 ──
-
-    ## ✓ ggplot2 3.3.3     ✓ purrr   0.3.4
-    ## ✓ tibble  3.1.1     ✓ dplyr   1.0.6
-    ## ✓ tidyr   1.1.3     ✓ stringr 1.4.0
-    ## ✓ readr   1.4.0     ✓ forcats 0.5.1
-
-    ## ── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
-    ## x ggplot2::%+%()   masks psych::%+%()
-    ## x ggplot2::alpha() masks psych::alpha()
-    ## x dplyr::filter()  masks stats::filter()
-    ## x dplyr::lag()     masks stats::lag()
-
-``` r
 library(faux) # for the function rnorm_pre
-```
-
-    ## 
-    ## ************
-    ## Welcome to faux. For support and examples visit:
-    ## https://debruine.github.io/faux/
-    ## - Get and set global package options with: faux_options()
-    ## ************
-
-``` r
 library(truncnorm) # for the function rtruncnorm
 ```
+
+### Creating simulation data
+
+#### Step 1: Create a single item
 
 The package `truncnorm` provides a function to sample data from a normal
 distribution, but with boundaries (“truncated”)! This is just what you
@@ -69,13 +50,15 @@ NPI_1 <- round(rtruncnorm(n = 500,
 head(NPI_1)
 ```
 
-    ## [1] -1 -1  0  1  1  0
+    ## [1]  0 -1  1  2 -1  0
 
 ``` r
 mean(NPI_1)
 ```
 
-    ## [1] -0.02
+    ## [1] -0.028
+
+#### Step 2: Get its correlated cousins
 
 Now we can use the `rnorm_pre` function from the `faux` package to
 simulate data that is correlated to our first item. For this, we set the
@@ -93,25 +76,28 @@ NPI_5 <- round(rnorm_pre(NPI_1, mu = 0, sd = 1, r = 0.8))
 NPI_6 <- round(rnorm_pre(NPI_1, mu = 0, sd = 1, r = 0.75))
 
 
-NPI <- data.frame(NPI_1, NPI_2, NPI_3, NPI_4, NPI_5, NPI_6)
-
-NPI <- as.data.frame(lapply(NPI, as.integer))
+NPI <- tibble(NPI_1, NPI_2, NPI_3, NPI_4, NPI_5, NPI_6)
 head(NPI)
 ```
 
+    ## # A tibble: 6 x 6
     ##   NPI_1 NPI_2 NPI_3 NPI_4 NPI_5 NPI_6
-    ## 1    -1    -1    -1    -2     0    -1
-    ## 2    -1    -2     0     0    -1    -1
-    ## 3     0     0     0     0     0     0
-    ## 4     1     1     2     1     1     1
-    ## 5     1     1     3     0     1     1
-    ## 6     0     0    -1    -1    -1     0
+    ##   <dbl> <dbl> <dbl> <dbl> <dbl> <dbl>
+    ## 1     0    -1     1     0     0     1
+    ## 2    -1     0    -2    -1    -1     0
+    ## 3     1     0     0     1     1     1
+    ## 4     2     1     1     1     2     3
+    ## 5    -1    -2    -1     1     0    -1
+    ## 6     0     1     0     0     1     1
+
+#### Step 3: Check the assumptions
 
 Great! Now that we have our simulated data from six items, we want to
 check whether they all load on one underlying latent factor. For this,
 we can use polychoric correlations, but Pearson correlations might be
 applicable too, see the book [Modern Psychometrics in
 R](https://scholar.harvard.edu/mair/publications/modern-psychometrics-r).
+The `hetcor` function from the `polycor` package calculates
 
 > “A detailed study of this phenomenon within the context of structural
 > equation models can be found in Rhemtulla et al. (2012). The authors
@@ -123,20 +109,17 @@ See also
 to learn how polychoric correlations work.
 
 ``` r
-Rmot2 <- polychoric(NPI, polycor = TRUE)
-```
+cormat <- hetcor(NPI) # calculate correlation matrix
+eigen_values <- eigen(cormat)
 
-    ## The polycor option has been removed from the polychoric function in the psych package.  Please fix the call.
-
-``` r
-Rdep <- Rmot2$rho
-scree(Rdep, factors = FALSE) # nice
+scree(cormat$correlations, factors = FALSE) # nice
 ```
 
 ![](2021-06-04-simulating-correlated-likert-scale-data_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 Cool! We actually seem to have one underlying component, as the “elbow”
-of the scree plot is behind the first component.
+of the scree plot is behind the first component - [see here for an
+explanation of scree plots](https://en.wikipedia.org/wiki/Scree_plot).
 
 Now let’s check the internal consistency using a custom-made cronbach’s
 alpha function:
@@ -154,6 +137,6 @@ cronbach.alpha <- function(data){
 cronbach.alpha(NPI) 
 ```
 
-    ## [1] 0.866339
+    ## [1] 0.8777856
 
 We seem to have a good internal consistency of the used scale! Horray!
