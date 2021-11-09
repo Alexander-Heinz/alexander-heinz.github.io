@@ -1,10 +1,8 @@
 ---
-layout: projects
-permalink: /projects/
-title: "Projects"
+layout: tutorials
+permalink: /tutorials/
+title: "Tutorials"
 author_profile: true
 header:
   image: "/images/fort point.png"
 ---
-
-

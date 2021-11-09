@@ -140,3 +140,5 @@ cronbach.alpha(NPI)
     ## [1] 0.8777856
 
 We seem to have a good internal consistency of the used scale! Horray!
+
+You can now start using the data for your investigations, _as if_ you're using real data!
