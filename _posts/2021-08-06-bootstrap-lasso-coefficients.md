@@ -29,7 +29,10 @@ process, the following approach has a simple logic:
     (optionally, you could also take the minimum and maximum value)
 
 Let us start by preparing the `mtcars` dataset for a lasso regresion in
-`glmnet`
+`glmnet`. 
+
+As an example, we will predict the miles per gallon from different cars in the `cars` dataset that is included in `R`.
+
 
 ``` r
 if (!require("pacman")) install.packages("pacman") # to install required packages
@@ -50,6 +53,8 @@ iterations = 1000 # number of bootstrap samples
 outcome <- mtcars$mpg %>% data.matrix() 
 predictors <- mtcars %>% select(-mpg) %>%  data.matrix()
 ```
+
+We set the number of folds for cross validation using `n_folds`. We also prepared a dataframe for the output and set the number of bootstrap samples to 1000. As predictors, we select all variables except for `mpg`, which should be our outcome variable.
 
 Now let’s start the bootstrapping process!
 
@@ -115,7 +120,9 @@ var_imp_avg <- var_imp_avg %>%
   filter(abs(Importance) > 0)
 ```
 
-Great! Now we have the coefficients, we can print them
+As you can see, I ran the cross-validated model 1000 times and stored the results in the output dataframe. I selected the 25th and 975th to get the values which can be seen as a bootstrapped confidence interval of our values. They provide a measurement of variation of our coefficients.
+
+Now that we have the coefficients, we can print them (here, I'm using `kableExtra` for R markdown files):
 
 ``` r
 var_imp_avg %>% 
@@ -136,4 +143,7 @@ var_imp_avg %>%
 | carb   |  -0.0038989 | \[-0.01, 0\]     |
 
 It looks like we have a variable that sometimes gets dropped out the
-model: the 95% CI of `am` includes zero.
+model: the 95% CI of `am` (automatic / manual gear) includes zero. Thus, we are rather uncertain about the influence of manual vs. automatic gear on the miles per gallon of a car. 
+Also, the `carb` (carbon emissions) variable has a tiny CI, and the one of `hp` (horsepower). As these are standardized coefficients, we can followingly say that the automatic / manual gear, horse power, and the carbon emissions don't really have an influence on the miles per gallon a car uses, but, e.g., the weight of it has!
+
+I hope you understood the essence of this by now, as otherwise we might have had a positive coefficient of `am` just by chance, and overestimated its influence. 
