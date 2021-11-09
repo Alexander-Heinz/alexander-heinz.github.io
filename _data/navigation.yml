@@ -4,6 +4,8 @@ main:
     url: /about/
   - title: "Private Projects"
     url: /projects/
+- title: "Tutorials"
+    url: /tutorials/
   - title: "University Projects"
     url: /uni-projects/
   # - title: "About"
