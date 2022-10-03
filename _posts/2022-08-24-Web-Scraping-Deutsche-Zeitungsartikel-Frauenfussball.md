@@ -1,13 +1,14 @@
 # Vorhersage der zwei größten deutschen Tageszeitungen (BILD / Süddeutsche Zeitung) basierend auf der Wortwahl von Fußball-Artikeln
 
 
+Im folgenden versuchen wir, ein Modell zu trainieren, was auf den Wortschatz der größten zwei deutschen Tageszeitungen anhand Artikeln über Frauenfußball trainiert wurde. Wir werden anschließend versuchen, anhand von ausgewählten Wörtern zu ermitteln, in welcher Tageszeitung dieses Wort eher stand. Im Zuge dessen werden wir auch einige explorative Analysen durchführen (Bigrams, Anzahl Artikel pro Tag etc.).
+
+Zunächst importieren wir die nötigen Packages.
+
 ```python
 from bs4 import BeautifulSoup
 import requests
 import pandas as pd
-#from pynndescent import NNDescent
-#from bertopic import BERTopic
-#import numpy as np
 import re
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -15,9 +16,9 @@ import nltk
 from collections import Counter
 import numpy as np
 from datetime import date
-
 ```
 
+Und erstellen unsere Funktionen fürs Scrapen:
 
 ```python
 
@@ -44,6 +45,7 @@ headers_fixed = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.111 Safari/537.36"
     }
 ```
+
 
 ## Bild-Zeitung
 
@@ -237,7 +239,7 @@ sns.histplot(data=BILD_df, x="date", bins = len(set(BILD_df.date)), shrink=.5, d
 
 
     
-![png](output_18_1.png)
+![png](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/output_18_1.png)
     
 
 
@@ -418,17 +420,13 @@ columns = ["headlines", "kickers", "entry_content", "date"])
 
 sueddeutsche_df.head()
 
-# check ob sie gleich lang sind
-print(len(sueddeutsche_df))
+# check ob sie etwa gleich lang sind
+len(sueddeutsche_df)
 len(BILD_df)
 
 ```
 
     978
-
-
-
-
 
     983
 
@@ -444,16 +442,13 @@ sns.set(rc={'figure.figsize':(11.7,8.27)})
 sns.histplot(data=sueddeutsche_df, x="date", bins = len(set(sueddeutsche_df.date)), shrink=.5, discrete = True)
 ```
 
-
-
-
     <AxesSubplot:xlabel='date', ylabel='Count'>
 
 
 
 
     
-![png](output_34_1.png)
+![png](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/output_34_1.png)
     
 
 
@@ -846,3 +841,4 @@ pd.DataFrame(docs_new, predicted)
 </div>
 
 
+Da dies in erster Linie ein Projekt war, um mir web scraping in Python beizubringen, hat die Analyse und das Modell keinen Anspruch auf Professionalität. Ich freue mich über konstruktive Kritik und hoffe, bald tiefer gehende Text-Mining-Projekte vorstellen zu können!
