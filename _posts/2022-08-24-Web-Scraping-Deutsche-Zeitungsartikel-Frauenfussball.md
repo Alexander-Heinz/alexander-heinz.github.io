@@ -1,5 +1,5 @@
-# Vorhersage der zwei größten deutschen Tageszeitungen (BILD / Süddeutsche Zeitung) basierend auf der Wortwahl von Fußball-Artikeln
-
+Vorhersage der zwei größten deutschen Tageszeitungen (BILD / Süddeutsche Zeitung) basierend auf der Wortwahl von Fußball-Artikeln
+================
 
 Im folgenden versuchen wir, ein Modell zu trainieren, was auf den Wortschatz der größten zwei deutschen Tageszeitungen anhand Artikeln über Frauenfußball trainiert wurde. Wir werden anschließend versuchen, anhand von ausgewählten Wörtern zu ermitteln, in welcher Tageszeitung dieses Wort eher stand. Im Zuge dessen werden wir auch einige explorative Analysen durchführen (Bigrams, Anzahl Artikel pro Tag etc.).
 
@@ -239,7 +239,7 @@ sns.histplot(data=BILD_df, x="date", bins = len(set(BILD_df.date)), shrink=.5, d
 
 
     
-![png](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/output_18_1.png)
+![](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/figure-gfm/output_18_1.png)
     
 
 
@@ -448,7 +448,7 @@ sns.histplot(data=sueddeutsche_df, x="date", bins = len(set(sueddeutsche_df.date
 
 
     
-![png](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/output_34_1.png)
+![](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/figure-gfm/output_34_1.png)
     
 
 
