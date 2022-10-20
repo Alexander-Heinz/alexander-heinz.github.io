@@ -115,7 +115,7 @@ eigen_values <- eigen(cormat)
 scree(cormat$correlations, factors = FALSE) # nice
 ```
 
-![png](_posts/2021-06-04-simulating-correlated-likert-scale-data_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
+![png](/2021-06-04-simulating-correlated-likert-scale-data_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
 
 Cool! We actually seem to have one underlying component, as the “elbow”
 of the scree plot is behind the first component - [see here for an
