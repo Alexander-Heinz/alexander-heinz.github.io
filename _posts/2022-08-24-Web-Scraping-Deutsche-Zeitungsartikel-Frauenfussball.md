@@ -241,8 +241,7 @@ sns.histplot(data=BILD_df, x="date", bins = len(set(BILD_df.date)), shrink=.5, d
 
 
     
-![png](output_18_1.png)
-![jpg](/images/web-scraping-frauenfussball/output_18_1.png)
+![png](/images/web-scraping-frauenfussball/output_18_1.png)
 
 
 Wir werden jetzt Stoppwörter entfernen, um unserer Textanalyse durchzuführen:
@@ -442,7 +441,7 @@ sns.histplot(data=sueddeutsche_df, x="date", bins = len(set(sueddeutsche_df.date
 
 
     
-![png](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/figure-gfm/output_34_1.png)<!-- -->
+![png](/images/web-scraping-frauenfussball/output_34_1.png)<!-- -->
     
 
 
