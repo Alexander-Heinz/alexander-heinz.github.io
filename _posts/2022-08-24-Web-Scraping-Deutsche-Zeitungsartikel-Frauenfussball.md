@@ -241,7 +241,7 @@ sns.histplot(data=BILD_df, x="date", bins = len(set(BILD_df.date)), shrink=.5, d
 
 
     
-![png](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/figure-gfm/output_18_1.png)
+![png](_posts/2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/figure-gfm/output_18_1.png)
     
 
 
