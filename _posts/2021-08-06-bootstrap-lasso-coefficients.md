@@ -1,7 +1,7 @@
 How To Bootstrap Lasso Coefficients
 ================
 
-In this tutorial and code snipped, I’ll show you how to gain more
+In this tutorial and code snippet, I’ll show you how to gain more
 confidence in your parameter estimates from a lasso regression.
 
 Lasso regression is known for a rather low Variable Selection Precision
@@ -146,4 +146,4 @@ It looks like we have a variable that sometimes gets dropped out the
 model: the 95% CI of `am` (automatic / manual gear) includes zero. Thus, we are rather uncertain about the influence of manual vs. automatic gear on the miles per gallon of a car. 
 Also, the `carb` (carbon emissions) variable has a tiny CI, and the one of `hp` (horsepower). As these are standardized coefficients, we can followingly say that the automatic / manual gear, horse power, and the carbon emissions don't really have an influence on the miles per gallon a car uses, but, e.g., the weight of it has!
 
-I hope you understood the essence of this by now, as otherwise we might have had a positive coefficient of `am` just by chance, and overestimated its influence. 
+I hope you understood the essence of this by now: if we did not use bootstrapping here, we might have had a positive coefficient of `am` just by chance, and overestimated its influence. 

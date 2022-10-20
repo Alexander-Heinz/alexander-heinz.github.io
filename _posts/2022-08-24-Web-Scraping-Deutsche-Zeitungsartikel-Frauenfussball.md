@@ -1,7 +1,9 @@
 Vorhersage der zwei größten deutschen Tageszeitungen (BILD / Süddeutsche Zeitung) basierend auf der Wortwahl von Fußball-Artikeln
 ================
 
-Im folgenden versuchen wir, ein Modell zu trainieren, was auf den Wortschatz der größten zwei deutschen Tageszeitungen anhand Artikeln über Frauenfußball trainiert wurde. Wir werden anschließend versuchen, anhand von ausgewählten Wörtern zu ermitteln, in welcher Tageszeitung dieses Wort eher stand. Im Zuge dessen werden wir auch einige explorative Analysen durchführen (Bigrams, Anzahl Artikel pro Tag etc.).
+Frauenfußball, ein Thema, welches zunehmend relevanter wird und 2022 wieder in die Aufmerksamkeit von Medien rückte. Doch wie gehen unterschiedliche Tageszeitungen damit um?
+
+Im folgenden versuchen wir, ein Modell zu trainieren, was auf den Wortschatz der größten zwei deutschen Tageszeitungen in Artikeln über Frauenfußball trainiert wurde. Wir werden anschließend versuchen, anhand von ausgewählten Wörtern zu ermitteln, in welcher Tageszeitung dieses Wort eher stand. Dies tun wir, indem wir Klassifikationsmodelle auf den Wortschatz trainieren. Im Zuge der Analyse werden wir auch einige explorative Analysen durchführen (Bigrams, Anzahl Artikel pro Tag etc.).
 
 Zunächst importieren wir die nötigen Packages.
 
@@ -239,7 +241,7 @@ sns.histplot(data=BILD_df, x="date", bins = len(set(BILD_df.date)), shrink=.5, d
 
 
     
-![](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/figure-gfm/output_18_1.png)
+![png](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/figure-gfm/output_18_1.png)
     
 
 
@@ -264,17 +266,9 @@ def clean_text(text):
         
     text = text.replace('\\n','')
     text = text.replace('\\','')
-    #text = text.replace('\t', '')
-    #text = re.sub('\[(.*?)\]','',text) #removes [this one]
     text = re.sub('(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?\s',
                 ' __url__ ',text) #remove urls
-    #text = re.sub('\'','',text)
-    #text = re.sub(r'\d+', ' __number__ ', text) #replaces numbers
-    #text = re.sub('\W', ' ', text)
-    # text = re.sub('!', '', text)
-    # text = re.sub(' +', ' ', text)
-    # text = text.replace('\t', '')
-    # text = text.replace('\n', '')
+
     text = re.sub('\W+',' ', text )
     return text
 
@@ -448,7 +442,7 @@ sns.histplot(data=sueddeutsche_df, x="date", bins = len(set(sueddeutsche_df.date
 
 
     
-![](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/figure-gfm/output_34_1.png)
+![png](2022-08-24-Web-Scraping-Deutsche-Zeitungsartikel-Frauenfussball-data_files/figure-gfm/output_34_1.png)<!-- -->
     
 
 
