@@ -6,8 +6,8 @@ main:
     url: /posts/
 #- title: "Tutorials"
 #    url: /tutorials/
-  - title: "University Projects"
-    url: /uni-projects/
+  - title: "Kaggle Competitions"
+    url: /kaggle-competitions/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

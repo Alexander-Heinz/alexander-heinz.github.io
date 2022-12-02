@@ -1,6 +1,6 @@
 ---
 title: "Kaggle Competitions"
-permalink: /uni-projects/
+permalink: /kaggle-competitions/
 header:
   image: "/images/zakim.jpg"
 ---
