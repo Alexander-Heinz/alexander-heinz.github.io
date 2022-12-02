@@ -1,7 +1,7 @@
 How To Bootstrap Lasso Coefficients
 ================
 
-In this tutorial and code snipped, I’ll show you how to gain more
+In this tutorial and code snippet, I’ll show you how to gain more
 confidence in your parameter estimates from a lasso regression.
 
 Lasso regression is known for a rather low Variable Selection Precision
