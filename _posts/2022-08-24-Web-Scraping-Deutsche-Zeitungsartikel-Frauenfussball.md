@@ -1,4 +1,7 @@
-Vorhersage der zwei größten deutschen Tageszeitungen (BILD / Süddeutsche Zeitung) basierend auf der Wortwahl von Fußball-Artikeln
+<base target = "_blank">
+
+
+Analyse der Wortwahl von Artikeln zum Thema "Frauenfußball" der zwei größten Tageszeitungen Deutschlands
 ================
 
 Frauenfußball, ein Thema, welches zunehmend relevanter wird und 2022 wieder in die Aufmerksamkeit von Medien rückte. Doch wie gehen unterschiedliche Tageszeitungen damit um?

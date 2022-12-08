@@ -1,3 +1,6 @@
+<base target = "_blank">
+
+
 How To Bootstrap Lasso Coefficients
 ================
 

@@ -8,6 +8,9 @@ excerpt: "Make beautiful animated barplots using ggplot & gganimate!"
 mathjax: "true"
 ---
 
+<base target = "_blank">
+
+
 I used to love watching videos from "data is beautiful", where barplots where animated and overtaking each other over time to show data changing over time. 
 
 Now I wanted to create one myself using R. I chose to use covid-data for this, because it is a relevant topic at these times.

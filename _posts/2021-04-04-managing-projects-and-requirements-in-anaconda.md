@@ -8,6 +8,8 @@ excerpt: "How to create a requirements.txt and install it via a virtualenv in co
 mathjax: "true"
 ---
 
+<base target = "_blank">
+
 
 ### Managing projects in anaconda: The Workflow
 

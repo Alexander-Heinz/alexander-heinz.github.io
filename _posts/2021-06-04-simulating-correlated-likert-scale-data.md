@@ -1,3 +1,6 @@
+<base target = "_blank">
+
+
 Simulating Correlated Likert-Scale Data In R: 3 Simple Steps
 ================
 
