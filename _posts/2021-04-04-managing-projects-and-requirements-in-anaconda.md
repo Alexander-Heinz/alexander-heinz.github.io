@@ -8,7 +8,6 @@ excerpt: "How to create a requirements.txt and install it via a virtualenv in co
 mathjax: "true"
 ---
 
-<base target = "_blank">
 
 
 ### Managing projects in anaconda: The Workflow
@@ -75,7 +74,7 @@ where `myenv` is your (custom) environment name
 * You can deactivate and get back to your base env using `conda deactivate`
 
 
-* See [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) for more information about managing environments in conda.
+* See [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html){:target="_blank"} for more information about managing environments in conda.
 
 
 ### 2. Install the requirements in that new environment
@@ -84,4 +83,4 @@ where `myenv` is your (custom) environment name
 
 * you can check if you're in the right pip using the command `which pip`
 
-* see [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#pip-in-env) for more information on using pip inside a virtual environment
+* see [this link](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html#pip-in-env){:target="_blank"} for more information on using pip inside a virtual environment

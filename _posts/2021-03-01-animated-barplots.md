@@ -8,8 +8,6 @@ excerpt: "Make beautiful animated barplots using ggplot & gganimate!"
 mathjax: "true"
 ---
 
-<base target = "_blank">
-
 
 I used to love watching videos from "data is beautiful", where barplots where animated and overtaking each other over time to show data changing over time. 
 
@@ -21,8 +19,7 @@ or mp4\!
 
 # Goals:
 
-  - create a bar plot as known from “data is beautiful” (youtube
-    <https://www.youtube.com/channel/UCkWbqlDAyJh2n8DN5X6NZyg>)
+  - create a bar plot as known from [“data is beautiful”](https://www.youtube.com/channel/UCkWbqlDAyJh2n8DN5X6NZyg){:target="_blank"}
   - use n-COVID-19 data to see the top countries animated
   - smoothen it up\!
 

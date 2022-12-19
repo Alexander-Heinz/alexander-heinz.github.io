@@ -1,6 +1,3 @@
-<base target = "_blank">
-
-
 Analyse der Wortwahl von Artikeln zum Thema "Frauenfußball" der zwei größten Tageszeitungen Deutschlands
 ================
 
@@ -704,7 +701,7 @@ print(y_test.shape)
     (648,)
 
 
-Nun können wir mit dem CountVectorizer eine Matrix mit Token Counts erstellen: Das ist quasi eine mathematische Darstellung der benutzten Wort-Tokens. Wie diese funktioniert ist hier auf Englisch gut erklärt: https://towardsdatascience.com/basics-of-countvectorizer-e26677900f9c
+Nun können wir mit dem CountVectorizer eine Matrix mit Token Counts erstellen: Das ist quasi eine mathematische Darstellung der benutzten Wort-Tokens. Wie diese funktioniert ist [hier](https://towardsdatascience.com/basics-of-countvectorizer-e26677900f9c){:target="_blank"} auf Englisch gut erklärt.
 
 Danach nutzen wir den TF:IDF Transformer um eine TF-IDF zu erstellen: 
 - TF ist die relative Häufigkeit eines Tokens (Wortes) im Dokument: Wie viele Wörter des Dokumentes (der Überschrift) sind jeweils dieses bestimmte Token? 
@@ -744,7 +741,7 @@ X_train_tfidf.shape
 
 
 
-Wir werden zunächst einen Multinomial Naive Bayes Classifier verwenden für die Klassifizierung
+Wir werden einen Multinomial Naive Bayes Classifier verwenden für die Klassifizierung
 
 
 ```python
@@ -752,7 +749,7 @@ from sklearn.naive_bayes import MultinomialNB
 clf = MultinomialNB().fit(X_train_tfidf, y_train)
 ```
 
-Wir benutzen jetzt zunächst Naive Bayes als Classifier. Wir können jetzt bereits anhand neuer "Dokumente" vorhersagen, welche Wörter in welcher Zeitung eher erscheinen würden. 
+Wir können jetzt bereits anhand neuer "Dokumente" vorhersagen, welche Wörter in welcher Zeitung eher erscheinen würden. 
 Wie bereits zu erwarten, sind Wörter wie "Schock" und "Skandal" prädiktiv für die BILD-Zeitung, die BILD redet lieber von "Mädels" und die Süddeutsche lieber von "Frauen", und lustigerweise sind auch "Sex" und "seriös" recht passend zugeordnet :-)
 
 

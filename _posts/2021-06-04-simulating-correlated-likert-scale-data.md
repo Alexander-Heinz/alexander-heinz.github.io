@@ -1,6 +1,3 @@
-<base target = "_blank">
-
-
 Simulating Correlated Likert-Scale Data In R: 3 Simple Steps
 ================
 
@@ -99,7 +96,7 @@ Great! Now that we have our simulated data from six items, we want to
 check whether they all load on one underlying latent factor. For this,
 we can use polychoric correlations, but Pearson correlations might be
 applicable too, see the book [Modern Psychometrics in
-R](https://scholar.harvard.edu/mair/publications/modern-psychometrics-r).
+R](https://scholar.harvard.edu/mair/publications/modern-psychometrics-r){:target="_blank"}.
 The `hetcor` function from the `polycor` package calculates
 
 > “A detailed study of this phenomenon within the context of structural
@@ -108,7 +105,7 @@ The `hetcor` function from the `polycor` package calculates
 > between Pearson and polychoric become negligible.”
 
 See also
-[here](https://www.r-bloggers.com/2021/02/how-does-polychoric-correlation-work-aka-ordinal-to-ordinal-correlation/)
+[here](https://www.r-bloggers.com/2021/02/how-does-polychoric-correlation-work-aka-ordinal-to-ordinal-correlation/){:target="_blank"}
 to learn how polychoric correlations work.
 
 ``` r
@@ -122,7 +119,7 @@ scree(cormat$correlations, factors = FALSE) # nice
 
 Cool! We actually seem to have one underlying component, as the “elbow”
 of the scree plot is behind the first component - [see here for an
-explanation of scree plots](https://en.wikipedia.org/wiki/Scree_plot).
+explanation of scree plots](https://en.wikipedia.org/wiki/Scree_plot){:target="_blank"}.
 
 Now let’s check the internal consistency using a custom-made cronbach’s
 alpha function:

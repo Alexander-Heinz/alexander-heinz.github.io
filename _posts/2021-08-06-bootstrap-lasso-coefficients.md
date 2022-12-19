@@ -1,6 +1,3 @@
-<base target = "_blank">
-
-
 How To Bootstrap Lasso Coefficients
 ================
 
@@ -10,8 +7,8 @@ confidence in your parameter estimates from a lasso regression.
 Lasso regression is known for a rather low Variable Selection Precision
 (VSP).
 
-See [Here](https://web.stanford.edu/~hastie/Papers/elasticnet.pdf) or
-[Here](https://www.duo.uio.no/bitstream/handle/10852/38874/KineVeronicaLund_MasterThesis.pdf?sequence=1)
+See [Here](https://web.stanford.edu/~hastie/Papers/elasticnet.pdf){:target="_blank"} or
+[Here](https://www.duo.uio.no/bitstream/handle/10852/38874/KineVeronicaLund_MasterThesis.pdf?sequence=1){:target="_blank"}
 for more details about this, but the essence is that:
 
 -   Lasso variable selection is poor when the number of feature is
@@ -24,11 +21,11 @@ To get an estimate of how stable predictors are in the selection
 process, the following approach has a simple logic:
 
 -   Run the `glmnet` model 1000 times, including a 10-fold [Cross
-    Validation](https://machinelearningmastery.com/k-fold-cross-validation/)
+    Validation](https://machinelearningmastery.com/k-fold-cross-validation/){:target="_blank"}
     every run to select a `lambda` value.
 
 -   Extract the 25th and 975th value to get a [bootstrap confidence
-    interval](https://acclab.github.io/bootstrap-confidence-intervals.html)
+    interval](https://acclab.github.io/bootstrap-confidence-intervals.html){:target="_blank"}
     (optionally, you could also take the minimum and maximum value)
 
 Let us start by preparing the `mtcars` dataset for a lasso regresion in
