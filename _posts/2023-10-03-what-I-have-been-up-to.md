@@ -1,6 +1,6 @@
 ---
 title: "What I've been up to"
-date: 2023-10-01
+date: 2023-10-03
 tags: [recent]
 header:
   image: "/images/whativebeenupto/lookback.jpg"
@@ -19,7 +19,7 @@ Second, I can not show projects here that are too similar to the things I do at 
 
 But most importantly, most of the time I rather spend my free time doing things that seriously relax me, and spend my time getting the physical exercise I feel I need.
 
-Anyway, I promised myself to contribute a little bit more to this blog, at least in wintertime :)
+Anyway, I promised myself to contribute a little bit more to this blog, at least in wintertime
 
 At my job, I've had various different projects that involved data analysis for clients in the FMCG industry. 
 
