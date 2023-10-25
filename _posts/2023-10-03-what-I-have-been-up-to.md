@@ -3,7 +3,7 @@ title: "What I've been up to"
 date: 2023-10-03
 tags: [recent]
 header:
-  image: "/images/whativebeenupto/lookback.jpg"
+  image: "/images/whativebeenupto/lookback-smaller.jpg"
 excerpt: "some thoughts"
 mathjax: "true"
 ---
@@ -17,18 +17,17 @@ First, I feel like the things I can achieve in a few hours outside my regular wo
 
 Second, I can not show projects here that are too similar to the things I do at work. 
 
-But most importantly, most of the time I rather spend my free time doing things that seriously relax me, and spend my time getting the physical exercise I feel I need.
+But most importantly, most of the time I rather spend my free time doing things that seriously relax me, like going to a spa, and spend my time getting the physical exercise I feel I need for my health and wellbeing.
 
-Anyway, I promised myself to contribute a little bit more to this blog, at least in wintertime
+Anyway, I promised myself to contribute a little bit more to this blog, at least in wintertime.
 
-At my job, I've had various different projects that involved data analysis for clients in the FMCG industry. 
+Let me tell you a bit about my job: At my job, I've had various different projects that involved data analysis for clients in the FMCG industry. 
 
-In the beginning, I worked on NLP projects analyzing short comments from social media and used topic modeling algorithms to attribute topics to short text comments, and sentiment analysis to classify the comments in positive / negative / neutral sentiment. 
+I started there as an intern. I worked on NLP projects analyzing short comments from social media and used topic modeling algorithms to attribute topics to short text comments, and sentiment analysis to classify the comments in positive / negative / neutral sentiment. 
 
 I also did some trials with the google vision API to classify images from social media into different categories. 
 
-This was both during my internship. 
-But then, there was my thesis. I administered a survey questionnaire to German shoppers to capture their response to novel food products and then used Bayesian Methods and some fancy regression methods to crystallize the most important factors influencing food product success.
+Then, there was my thesis. I administered a survey questionnaire to German shoppers to capture their response to novel food products and then used Bayesian Methods and some fancy regression methods to crystallize the most important factors influencing food product success.
 
 When I started working full time, my projects kind of changed. 
 
@@ -36,4 +35,12 @@ Now, things had to be done for the clients. Data had to be analyzed, expectation
 
 In these store scanner data projects, I got involved in the world of causal inference: Using difference-in-difference methods, and by creating synthetic control groups, the actual effects of changes in store layout or marketing actions could be quantified. 
 
-Since I can not share the actual code with you, I made some kaggle dataset regressions using rstanarm, which you can view [here](https://www.kaggle.com/code/glaswasser/inference-prediction-on-walmart-store-sales-data)
+Since I can not share the actual code with you, I made some kaggle dataset regressions using rstanarm, which you can view [here](https://www.kaggle.com/code/glaswasser/inference-prediction-on-walmart-store-sales-data){:target="_blank"}.
+
+Other projects involved the creation of web-apps, which involved programming the backend, frontand and deployment. The learning curve was very steep, especially when my manager, who created the app and the analysis code for the scanner data projects, left our company. 
+
+By now, things have gotten calmer and I work on my projects with more routine and self-confidence. We introduced some new frameworks (gitlab, azure databricks...) and continue to improve our teamwork and codebase. 
+
+Even if the work as a consultant can be stressful at times with ambiguous demands, changing priorities, messy data and short deadlines, I feel like I'm improving my knowledge and skills. 
+
+I hope to find the time to take a breath and reflect like I'm doing now from time to time. Cheers.
