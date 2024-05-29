@@ -10,7 +10,7 @@ header:
 
 #### Private Projects
 
-[**News Scraping Platform**]https://github.com/Alexander-Heinz/NewsScraping_staging
+[**News Scraping Platform**](https://github.com/Alexander-Heinz/NewsScraping_staging)
 * web scraping of newspaper articles
 * MongoDB storage of scraped text
 * Python Flask backend connecting to MongoDB API
@@ -18,7 +18,7 @@ header:
 * Docker-compose containerization
 
 
-[**In progress: MLOps Zoomcamp**]https://github.com/Alexander-Heinz/mlops-zoomcamp
+[**In progress: MLOps Zoomcamp**](https://github.com/Alexander-Heinz/mlops-zoomcamp)
 * By DataTalks, started on May 13, 2024 (https://github.com/DataTalksClub/mlops-zoomcamp/tree/main)
 * Final project will be added towards end of June!
 
