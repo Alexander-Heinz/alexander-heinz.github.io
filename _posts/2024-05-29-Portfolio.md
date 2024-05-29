@@ -1,9 +1,9 @@
 ---
-title: "My Portfolio"
-date: 2024-05-24
+title: "Portfolio"
+date: 2024-05-29
 tags: [data, science, portfolio]
 header:
-  image: "/images/waterfrontold3.jpeg
+  image: "/images/waterfrontold3.jpeg"
 excerpt: "My portfolio"
 mathjax: "true"
 ---
