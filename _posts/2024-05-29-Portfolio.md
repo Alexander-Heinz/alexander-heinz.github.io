@@ -49,13 +49,13 @@ mathjax: "true"
 
 #### Private Projects
 
-[**Inference & prediction of wal mart time series sales data**]https://www.kaggle.com/code/glaswasser/inference-prediction-bayesian-regression-rstan)
+[**Inference & prediction of wal mart time series sales data**](https://www.kaggle.com/code/glaswasser/inference-prediction-bayesian-regression-rstan)
 
 * Bayesian Applied Regression Modeling via Stan
 
 
 
-[**Titanic Dataset - Explorative & predictive analysis**]https://www.kaggle.com/code/glaswasser/titanic-dataset-explorative-predictive-analysis)
+[**Titanic Dataset - Explorative & predictive analysis**](https://www.kaggle.com/code/glaswasser/titanic-dataset-explorative-predictive-analysis)
 
 * Feature engineering / data visualization
 * Logistic Regression
