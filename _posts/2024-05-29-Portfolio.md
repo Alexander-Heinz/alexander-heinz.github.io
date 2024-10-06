@@ -11,7 +11,15 @@ mathjax: "true"
 
 ## Development
 
-#### Private Projects
+[**FAQ RAG Chatbot**](https://github.com/Alexander-Heinz/vdi_chatbot)
+* Final Project for [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp/) Course, started in August 24
+* RAG Chatbot using a knowledge base and LLMs to answer user queries
+
+
+[**Autoscout Price Prediction**](https://github.com/Alexander-Heinz/autoscout-price-prediction)
+* Final Project for [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp/tree/main), started in May 24
+* Model development, deployment & monitoring
+
 
 [**News Scraping Platform**](https://github.com/Alexander-Heinz/NewsScraping_staging)
 * web scraping of newspaper articles
@@ -20,14 +28,7 @@ mathjax: "true"
 * React Frontend for displaying tabular data coming from backend
 * Docker-compose containerization
 
-
-[**In progress: MLOps Zoomcamp**](https://github.com/Alexander-Heinz/mlops-zoomcamp)
-* By DataTalks, started on May 13, 2024 (https://github.com/DataTalksClub/mlops-zoomcamp/tree/main)
-* Final project will be added towards end of June!
-
-
 ## Kaggle Competitions
-#### from the course "Big Data Analysis" at the University of Amsterdam
 
 [**Predicting Amazon review ratings from their text content**](https://www.kaggle.com/glaswasser/baby-reviews-elise-tom-alex-group-5-round-2)
 * Lasso and Ridge regression
@@ -46,8 +47,7 @@ mathjax: "true"
 
 * Linear Regression
 
-
-#### Private Projects
+## Data Analysis / Prediction Notebooks
 
 [**Inference & prediction of wal mart time series sales data**](https://www.kaggle.com/code/glaswasser/inference-prediction-bayesian-regression-rstan)
 
@@ -62,4 +62,5 @@ mathjax: "true"
 * SVM
 * KNN
 * RF
+
 

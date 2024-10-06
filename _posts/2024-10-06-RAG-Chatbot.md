@@ -4,7 +4,7 @@ date: 2024-05-29
 tags: [rag, chatbot, development]
 header:
   image: "/images/port.jpg"
-excerpt: "RAG Chatbot"
+excerpt: "My journey of developing a RAG Chatbot"
 mathjax: "true"
 ---
 # Building a Smart Chatbot: My Journey with RAG Chatbot Development
