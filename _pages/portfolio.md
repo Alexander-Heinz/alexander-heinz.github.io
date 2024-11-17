@@ -13,17 +13,10 @@ header:
 * RAG Chatbot using a knowledge base and LLMs to answer user queries
 
 
-[**Autoscout Price Prediction**](https://github.com/Alexander-Heinz/autoscout-price-prediction)
+[**Car Price Prediction Webservice**](hhttps://github.com/Alexander-Heinz/car-price-webapp)
 * Final Project for [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp/tree/main), started in May 24
 * Model development, deployment & monitoring
-
-
-[**News Scraping Platform**](https://github.com/Alexander-Heinz/NewsScraping_staging)
-* web scraping of newspaper articles
-* MongoDB storage of scraped text
-* Python Flask backend connecting to MongoDB API
-* React Frontend for displaying tabular data coming from backend
-* Docker-compose containerization
+* Cloud Hosting as webservice (React & Flask)
 
 ## Kaggle Competitions
 
