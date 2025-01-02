@@ -13,10 +13,10 @@ header:
 * RAG Chatbot using a knowledge base and LLMs to answer user queries
 
 
-[**Car Price Prediction Webservice**](hhttps://github.com/Alexander-Heinz/car-price-webapp)
+[**Car Price Prediction Webservice**](https://github.com/Alexander-Heinz/car-price-webapp)
 * Final Project for [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp/tree/main), started in May 24
 * Model development, deployment & monitoring
-* Cloud Hosting as webservice (React & Flask)
+* Cloud Hosting 
 
 ## Kaggle Competitions
 
