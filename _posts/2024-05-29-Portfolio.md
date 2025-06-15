@@ -8,23 +8,25 @@ header:
 
 ## Development
 
-[**LLM: RAG Chatbot**](https://github.com/Alexander-Heinz/vdi_chatbot)
+### LLM:
+[**RAG Chatbot**](https://github.com/Alexander-Heinz/vdi_chatbot)
 * Enhancing the BMBF-FAQ-Chatbot from VDI-VDE/IT using RAG technology
 * Final Project for [LLM Zoomcamp](https://github.com/DataTalksClub/llm-zoomcamp/) Course, finished in August 2024
 
-
-[**ML: Car Price Prediction Web App & Webservice**](https://github.com/Alexander-Heinz/car-price-webapp)
+### MLOps
+[**Car Price Prediction Webservice**](https://github.com/Alexander-Heinz/autoscout-price-prediction) & [**Web App**](https://github.com/Alexander-Heinz/car-price-webapp)
 * Model development, deployment & monitoring
 * Cloud Hosting as webservice & Web App
 * Final Project for [MLOps Zoomcamp](https://github.com/DataTalksClub/mlops-zoomcamp/tree/main), finished in May 2024
 
-[**API building: Autoscout24 Germany Scraper**](https://apify.com/glaswasser/autoscout24-germany-deutschland---scraper)
+### API building
+[**Autoscout24 Germany Scraper**](https://apify.com/glaswasser/autoscout24-germany-deutschland---scraper)
 * Paid Web Scraping API for Autoscout24.de
 * Scrapes latest listings and returns them in a structured format
-* I also store the data in BigQuery using a cron-job for future dashboarding and ML modeling
+* I also store the data in BigQuery using a cron-job for future dashboarding and ML modeling (potential synergies with the car price prediction project)
 
-
-[**ETL: Berliner Luft - Air Quality Dashboard**](https://github.com/Alexander-Heinz/Berliner-Luft)
+### ETL
+[**Berliner Luft - Air Quality Dashboard**](https://github.com/Alexander-Heinz/Berliner-Luft)
 * Air Quality Dashboard showing most recent pollution data from Umweltbundesamt API
 * Enhanced through *equivalent in Cigarettes* to make air quality measurements intuitive
 * Umweltbundesamt API -> Google BigQuery -> Looker Studio
