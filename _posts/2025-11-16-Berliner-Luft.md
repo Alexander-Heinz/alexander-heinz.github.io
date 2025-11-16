@@ -12,7 +12,11 @@ mathjax: "true"
 
 Vor einiger Zeit habe ich ein kompaktes Data Engineering-Projekt gebaut um meine Skills in Data Engineering, API-Handling und Cloud-Infrastruktur zu vertiefen. Ziel war es, Luftqualitätsdaten automatisch aus einer API abzurufen, sauber zu speichern und anschließend auszuwerten – inklusive einer kleinen Visualisierung, die Luftqualität intuitiv begreifbar macht. 
 Ich freue mich sehr, dass das Dashboard auf Google Looker Studio bis heute automatisiert und robust läuft und ich jederzeit die Luftqualität in meiner Nähe ansehen kann:
+
 [Hier klicken, um das Dashboard zu sehen](https://lookerstudio.google.com/reporting/dd051443-68b7-4ff7-84bb-29031462c339)
+
+[Hier geht's zum Github Repo](https://github.com/Alexander-Heinz/Berliner-Luft)
+
 Im Folgenden möchte ich das Projekt kurz beschreiben, um meine Learnings daraus festzuhalten:
 
 ## Revisionssichere Datenspeicherung: API-Daten nachvollziehbar ablegen
